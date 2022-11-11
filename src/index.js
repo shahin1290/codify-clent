@@ -1,5 +1,9 @@
-const receipe = {
-  rice: 1,
-  vegetables: 3,
+const elvenShieldRecipe = {
+  leatherStrips: 2,
+  ironIngot: 1,
+  refinedMoonstone: 4,
 };
-console.log(receipe);
+
+const updated = { ...elvenShieldRecipe, updatedItem: 2 };
+
+console.log(elvenShieldRecipe);
