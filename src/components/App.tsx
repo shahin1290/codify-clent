@@ -1,8 +1,11 @@
+import React from "react";
 import Recipes from "./Recipes";
 import sword from "../images/swc-sword.png";
 import swordSvg from "../images/sword.svg";
 
 const App = () => {
+
+  
   return (
     <>
       <section className="hero"></section>

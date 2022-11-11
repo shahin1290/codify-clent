@@ -13,6 +13,8 @@ if (process.env.NODE_ENV === "production") {
 }
 
 module.exports = {
+  entry: path.resolve(__dirname, "src/index.tsx"),
+
   // mode defaults to 'production' if not set
   mode: mode,
 
@@ -57,6 +59,14 @@ module.exports = {
         ],
       },
       {
+        test: /\.(ts|js)x?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+        },
+      },
+
+      {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
@@ -77,7 +87,7 @@ module.exports = {
   ],
 
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: [".js", ".jsx", ".ts", ".tsx"],
   },
 
   target: target,
