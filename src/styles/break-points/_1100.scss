@@ -1,0 +1,58 @@
+@use "../general-styles/typography" as type;
+
+@media screen and (max-width: 1100px) {
+  // ------------------------------------------- Header
+  .header {
+    &__nav--links {
+      flex-basis: 100%;
+      order: 3;
+    }
+
+    &__hero {
+      gap: 2rem;
+
+      &--title {
+        font-size: type.font-size-st(lc);
+      }
+    }
+  }
+
+  // ------------------------------------------- Events
+  .events {
+    &__timing {
+      &--event {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, min-content);
+
+        &__date-time {
+          justify-self: center;
+        }
+
+        &__desc {
+          grid-column: 1 / 2;
+          grid-row: 2 / 3;
+          justify-self: start;
+        }
+
+        &__link {
+          grid-column: 1 / 2;
+          grid-row: 2 / 3;
+          justify-self: end;
+        }
+      }
+    }
+  }
+
+  // ------------------------------------------- Blog Page
+  .blog-page .blogs__popular-feeds--content__feed {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+
+    &--img,
+    &--desc,
+    &--date {
+      grid-column: auto / auto;
+      grid-row: auto / auto;
+    }
+  }
+}

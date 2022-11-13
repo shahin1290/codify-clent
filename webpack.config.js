@@ -1,7 +1,6 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 let mode = "development";
 let target = "web";
@@ -77,11 +76,11 @@ module.exports = {
   },
 
   plugins: [
-    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: "Codify College Client",
       filename: "index.html",
       template: "src/index.html",
+      favicon: "src/images/favicon.svg",
     }),
     new MiniCssExtractPlugin(),
   ],
